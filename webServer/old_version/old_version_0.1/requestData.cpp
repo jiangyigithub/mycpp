@@ -10,7 +10,6 @@
 #include <sys/mman.h>
 #include <queue>
 
-#include <opencv/cv.h>
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/opencv.hpp>
@@ -505,7 +504,7 @@ int requestData::analysisRequest()
         }
         cout << "content size ==" << content.size() << endl;
         vector<char> data(content.begin(), content.end());
-        Mat test = imdecode(data, CV_LOAD_IMAGE_ANYDEPTH|CV_LOAD_IMAGE_ANYCOLOR);
+        Mat test = imdecode(data, cv::IMREAD_ANYDEPTH | cv::IMREAD_ANYCOLOR);
         imwrite("receive.bmp", test);
         return ANALYSIS_SUCCESS;
     }
