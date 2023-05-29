@@ -3,8 +3,8 @@ OBJS    := $(patsubst %.c,%.o,$(patsubst %.cpp,%.o,$(SOURCE)))
 
 TARGET  := myserver
 CC      := g++
-LIBS    := -lpthread -lopencv_core -lopencv_imgproc -lopencv_highgui
-INCLUDE:= -I./usr/local/include/opencv
+LIBS := -lpthread -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_imgcodecs # the lib of imgcodecs.hpp
+INCLUDE := -I /usr/include/opencv4 # opencv include path in system
 CFLAGS  := -std=c++11 -g -Wall -O3 $(INCLUDE)
 CXXFLAGS:= $(CFLAGS)
 

@@ -84,10 +84,11 @@ int main(int argc, char *argv[]) {
   sleep(1);
 
   // 发
-  // GET  HTTP/1.1
-  // Host: 192.168.52.135:8888
-  // Content-Type: application/x-www-form-urlencoded
-  // Connection: Keep-Alive
+  // GET / HTTP/1.1          // Request line: GET method, target URL ("/"), HTTP version (1.1)
+  // Host: 192.168.52.135:8888  // Host header: Specifies the hostname and port number
+  // Content-Type: application/x-www-form-urlencoded  // Content-Type header: Specifies the type of data being sent
+  // Connection: Keep-Alive  // Connection header: Specifies the connection type
+  // \r\n\r\n               // Empty line indicating the end of the headers
   p = "GET / HTTP/1.1\r\nHost: 192.168.52.135:8888\r\nContent-Type: "
       "application/x-www-form-urlencoded\r\nConnection: Keep-Alive\r\n\r\n";
   sockfd = socket(AF_INET, SOCK_STREAM, 0);
