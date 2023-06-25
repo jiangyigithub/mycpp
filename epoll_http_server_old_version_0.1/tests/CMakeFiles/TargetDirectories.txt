@@ -1,0 +1,3 @@
+/home/jan5szh/workspaces/epoll_http_server_old_version_0.1/tests/CMakeFiles/rebuild_cache.dir
+/home/jan5szh/workspaces/epoll_http_server_old_version_0.1/tests/CMakeFiles/edit_cache.dir
+/home/jan5szh/workspaces/epoll_http_server_old_version_0.1/tests/CMakeFiles/HTTPClient.dir
